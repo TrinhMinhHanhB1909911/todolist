@@ -1,0 +1,32 @@
+.tasks {
+    background-color: #526197;
+}
+
+.checkbox {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.star {
+    position: absolute;
+    right: 20px;
+}
+
+.search {
+    position: relative;
+    top: .8rem;
+    left: 7.5rem;
+}
+
+#search {
+    text-indent: 36px;
+}
+
+/* .close {
+    opacity: .5;
+    position: relative;
+    top: .5rem;
+    right: 17.8rem;
+    width: 24px;
+    height: 24px;
+} */

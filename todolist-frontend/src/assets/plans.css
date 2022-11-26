@@ -1,0 +1,36 @@
+
+.tasks {
+    background-color: #526197;
+}
+
+.checkbox {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.star {
+    position: absolute;
+    right: 20px;
+}
+
+.divider {
+    background-color: aliceblue;
+    height: 4px;
+}
+
+.border-bottom-custom {
+    position: relative;
+}
+
+.border-bottom-custom::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 75%;
+    border-bottom: 1px solid blue;
+    transform: translate(17%);
+}
+
+
