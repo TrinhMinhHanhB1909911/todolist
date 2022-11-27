@@ -279,6 +279,7 @@ export default {
             }
         },
         editPlan(index) {
+            this.activeIndex = index;
             this.taskEditing = false;
             this.planTextToEdit = this.plans[index].title;
             this.planEditing = true;

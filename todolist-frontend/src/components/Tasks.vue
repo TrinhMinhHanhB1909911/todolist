@@ -235,7 +235,7 @@ export default {
         textSearch(newText) {
             if (newText.length === 0)
                 this.searching = false;
-            this.tasksSearched = this.tasks.filter((task) => task.title.includes(newText));
+            this.tasksSearched = this.tasks.filter((task) => task.title.toLowerCase().includes(newText.toLowerCase()));
         },
     },
 }
