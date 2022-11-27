@@ -22,11 +22,6 @@
     text-indent: 36px;
 }
 
-/* .close {
-    opacity: .5;
-    position: relative;
-    top: .5rem;
-    right: 17.8rem;
-    width: 24px;
-    height: 24px;
-} */
+.pointer {
+    cursor: pointer;
+}

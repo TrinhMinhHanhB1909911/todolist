@@ -18,7 +18,7 @@ const routes = [
     {
         path: "/Tasks/:id/edit",
         name: "task.edit",
-        component: () => import("@/components/TaskEdit.vue"),
+        component: () => import("@/components/NotFound.vue"),
     }
 ];
 const router = createRouter({

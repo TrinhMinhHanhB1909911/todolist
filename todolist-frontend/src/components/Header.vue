@@ -30,8 +30,8 @@ export default {
             this.$router.push("/Tasks");
         },
         home() {
-            this.index = 0;
-            this.$router.push('/');
+            location.reload();
+            return;
         }
     },
     created() {
