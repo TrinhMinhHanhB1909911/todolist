@@ -6,13 +6,12 @@
                     Kế hoạch
                 </h5>
                 <template v-for="plan, index in plans">
-                    <div :class="{ 'bg-primary text-light': activeIndex === index }" class="btn d-block text-start"
-                        @click="getPlanTasks(plan._id, index)">
+                    <div :class="{ 'bg-primary text-light': activeIndex === index }"
+                        class="btn d-block text-start" @click="getPlanTasks(plan._id, index)">
                         <div class="d-flex p-2">
                             <font-awesome-icon icon="list-check" class="align-middle p-1" />
                             <span class="px-1 me-auto mw-25 align-middle overflow-hidden">{{ plan.title }}</span>
-                            <font-awesome-icon icon="edit" class="btn align-middle"
-                                @click.stop="editPlan(index)" />
+                            <font-awesome-icon icon="edit" class="btn align-middle" @click.stop="editPlan(index)" />
                             <font-awesome-icon icon="trash" class="btn text-danger align-middle"
                                 @click.stop="deletePlan(plan._id, index)" />
 
@@ -161,6 +160,8 @@ export default {
             }
         },
         async getPlanTasks(planId, index) {
+            this.planEditing = false;
+            this.taskEditing = false;
             this.activeIndex = index;
             try {
                 this.tasks = [];

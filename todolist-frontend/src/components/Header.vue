@@ -5,9 +5,9 @@
                 <img src="../assets/logo.svg" alt="" width="56" height="56" class="d-inline">
                 <h5 class="d-inline align-middle text-light p-2">TO DO LIST</h5>
             </span>
-            <button :class="{ 'active': index === 0 }" type="button" class="btn btn-primary" @click="allPlans">Kế
+            <button :class="{ 'activating': index === 0 }" type="button" class="btn btn-primary px-4" @click="allPlans">Kế
                 hoạch</button>
-            <button :class="{ 'active': index === 1 }" type="button" class="btn btn-primary" @click="allTasks">Tất cả
+            <button :class="{ 'activating': index === 1 }" type="button" class="btn btn-primary px-4" @click="allTasks">Tất cả
                 công việc</button>
         </div>
     </div>
@@ -43,5 +43,20 @@ export default {
 .logo {
     width: 48px;
     height: 48px;
+}
+
+.activating {
+   position: relative;
+}
+
+.activating::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-bottom: 4px solid white;
+    border-radius: 0px;
 }
 </style>

@@ -139,7 +139,8 @@
         </div>
     </div>
     <div v-else class="container mt-3">
-        <h5 class="text-center mt-5 text-danger">Bạn chưa có công việc nào! <span @click="home" class="opacity-75 text-primary text-decoration-underline pointer">Trang chủ.</span></h5>
+        <h5 class="text-center mt-5 text-danger">Bạn chưa có công việc nào! <span @click="home"
+                class="opacity-75 text-primary text-decoration-underline pointer">Trang chủ.</span></h5>
     </div>
 </template>
 
@@ -168,6 +169,9 @@ export default {
             this.tasks = await TaskService.getAll();
         },
         async deleteTask(id) {
+            if (this.taskEdit._id === id) {
+                this.editing = false;
+            }
             try {
                 await TaskService.delete(id);
                 this.tasks = this.tasks.filter((task) => task._id !== id);
@@ -219,7 +223,7 @@ export default {
                 console.log(error);
             }
         },
-        home () {
+        home() {
             location.reload();
         }
     },
